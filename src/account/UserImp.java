@@ -83,7 +83,7 @@ public class UserImp extends User{
 		return lumsum[emi];
 	}
 	public void setLumsum(int lumsum,int emi) {
-		this.lumsum[emi] = lumsum;
+		this.lumsum[emi] += lumsum;
 	}
 	public void setPrincipalAmount(long principalAmount) {
 		this.principalAmount = principalAmount;
@@ -91,9 +91,17 @@ public class UserImp extends User{
 	public void setPaidAmt(long paidAmt) {
 		this.paidAmt = paidAmt;
 	}
+	
+	public int getReduceEmi() {
+		return reduceEmi;
+	}
+	public void setReduceEmi(int reduceEmi) {
+		this.reduceEmi = reduceEmi;
+	}
 	private String username;
 	private String bankName;
 	private long accountNumber;
+	private int reduceEmi;
     private long total;
     private long principalAmount;
     private long interest;
@@ -112,12 +120,14 @@ public class UserImp extends User{
 		this.duration = duration;
 		this.rate = rate;
 		paidAmt = 0;
+		BusinessLogic o = BusinessLogic.build();
 		//Calculate interest on creation of account
-		interest = BusinessLogic.caculateInterest(principal, duration,rate);
+		interest = o.caculateInterest(principal, duration,rate);
 		//Calculate total amount
-		setTotal(BusinessLogic.totalAmount(this.principalAmount,  interest));
+		setTotal(o.totalAmount(this.principalAmount,  interest));
 		//calculate total emi count
 		emiCount = duration*12;
+		reduceEmi = emiCount;
 		float total = getTotal();
 		emiPerMonth = (int)Math.ceil(total/getEmiCount());
 		emiList = new int[getEmiCount()+1];
