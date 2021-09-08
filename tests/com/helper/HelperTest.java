@@ -1,8 +1,8 @@
-package helper;
+package com.helper;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import account.UserImp;
+import com.account.UserImp;
 
 public class HelperTest {
     private SystemHelper helper = SystemHelper.getInstance();

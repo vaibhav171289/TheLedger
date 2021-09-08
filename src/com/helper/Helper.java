@@ -1,6 +1,6 @@
-package helper;
+package com.helper;
 
-import account.UserImp;
+import com.account.UserImp;
 
 public interface Helper {
 	public boolean addActiveUserEntry(String bank, String userName, UserImp user);

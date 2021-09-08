@@ -1,10 +1,6 @@
-package account;
+package com.account;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
-
-import account.UserImp;
+import org.junit.jupiter.api.Test;
 
 public class UserTest {
 

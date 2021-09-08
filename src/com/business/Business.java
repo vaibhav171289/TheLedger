@@ -1,6 +1,6 @@
-package business;
+package com.business;
 
-import account.UserImp;
+import com.account.UserImp;
 
 public abstract class Business {
 	public abstract long caculateInterest(int principal, int years, int rate) ;

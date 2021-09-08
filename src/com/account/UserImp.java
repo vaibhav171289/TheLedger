@@ -1,8 +1,8 @@
-package account;
+package com.account;
 
 import java.util.Arrays;
 
-import business.BusinessLogic;
+import com.business.BusinessLogic;
 
 public class UserImp extends User{
     public String getUsername() {

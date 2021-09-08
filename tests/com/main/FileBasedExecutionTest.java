@@ -1,6 +1,6 @@
-package main;
+package com.main;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class FileBasedExecutionTest {
 

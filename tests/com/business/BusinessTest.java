@@ -1,8 +1,8 @@
-package business;
+package com.business;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import account.UserImp;
+import com.account.UserImp;
 
 public class BusinessTest {
 

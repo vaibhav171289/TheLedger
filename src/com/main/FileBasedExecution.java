@@ -1,11 +1,11 @@
-package main;
+package com.main;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import account.UserImp;
-import helper.SystemHelper;
+import com.account.UserImp;
+import com.helper.SystemHelper;
 
 public class FileBasedExecution {
 	public static void main(String[] args) {
@@ -50,12 +50,12 @@ public class FileBasedExecution {
 							}
 							case "PAYMENT": {
 								int lumsum = Integer.parseInt(input[3]);
-								if(lumsum <= 0) {
+								if(lumsum < 0) {
 									System.out.println("please provide a valid lumsum amount for "+ username+" of bank: "+bankname);
 									break;
 								}
 								int emiNumber = Integer.parseInt(input[4]);
-								if(emiNumber <= 0) {
+								if(emiNumber < 0) {
 									System.out.println("please provide a valid EMI Number for "+ username+" of bank: "+bankname);
 									break;
 								}

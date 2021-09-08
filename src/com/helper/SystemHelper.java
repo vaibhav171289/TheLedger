@@ -1,9 +1,9 @@
-package helper;
+package com.helper;
 
 import java.util.concurrent.ConcurrentHashMap;
 
-import account.UserImp;
-import business.BusinessLogic;
+import com.account.UserImp;
+import com.business.BusinessLogic;
 
 public class SystemHelper implements Helper {
 	public static SystemHelper helper = null;

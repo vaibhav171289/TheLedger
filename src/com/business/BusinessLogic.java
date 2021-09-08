@@ -1,6 +1,6 @@
-package business;
+package com.business;
 
-import account.UserImp;
+import com.account.UserImp;
 
 public class BusinessLogic extends Business {
 
@@ -62,7 +62,7 @@ public class BusinessLogic extends Business {
 			long valueAfterEmi = emiPerMon * emiNumber;
 			long lumsum = 0;
 			// consider all the lumsum paid till this emi number
-			for (int i = 1; i <= emiNumber; i++) {
+			for (int i = 0; i <= emiNumber; i++) {
 				lumsum += user.getLumsum(i);
 			}
 			long total = valueAfterEmi + lumsum;
@@ -114,7 +114,7 @@ public class BusinessLogic extends Business {
 		long paidAmt = user.getPaidAmt();
 		int[] emiList = user.getEmiList();
 		// add the current emi amount to paidAmount till the emiNumber
-		for (int i = 1; i <= emiNumber; i++) {
+		for (int i = 0; i <= emiNumber; i++) {
 			if (i == user.getReduceEmi()) {
 				paidAmt = user.getTotal();
 			} else {
